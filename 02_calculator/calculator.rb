@@ -6,3 +6,11 @@ end
 def subtract(a, b)
   add(a, -b)
 end
+
+def sum(numbers)
+  sum = 0;
+  numbers.each do |number|
+    sum += number
+  end
+  sum
+end
