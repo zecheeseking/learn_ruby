@@ -14,9 +14,8 @@ class Timer
 
   def time_string
     secs = @seconds % 60
-    minutes = @seconds / 60
-    hours = minutes / 60
-    minutes = minutes % 60
+    minutes = (@seconds / 60) % 60
+    hours = (@seconds / 60) / 60
     "#{hours < 10 ? "0#{hours}" : hours}:#{minutes < 10 ? "0#{minutes}" : minutes }:#{secs < 10 ? "0#{secs}" : secs}"
   end
 end
