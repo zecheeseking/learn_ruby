@@ -5,6 +5,7 @@ def translate(word)
   if vowels.include?(word[0])
     return word + 'ay'
   else
-    return word[1...word.length] + word[0] + 'ay'
+    vowel_index = word.index(/[aeiou]/)
+    return word[vowel_index...word.length] + word[0...vowel_index] + 'ay'
   end
 end
